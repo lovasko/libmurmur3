@@ -6,6 +6,7 @@
 #define MURMUR3_OK       0
 #define MURMUR3_E_NULL   1
 #define MURMUR3_E_LENGTH 2
+#define MURMUR3_E_COUNT  3
 
 /**
  * Perform the Murmur3 non-cryptographic hash function.
@@ -17,6 +18,7 @@
  * @return MURMUR3_OK on success, MURMUR3_E_* otherwise
  */
 int murmur3(void* data, uint32_t len, uint32_t seed, uint32_t* out_hash);
+int murmur3n(void* data, uint32_t len, uint32_t n, uint32_t* seed, uint32_t** out_hash);
 
 #endif
 
